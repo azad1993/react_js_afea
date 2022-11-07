@@ -92,14 +92,14 @@ const Register = (props) => {
               error.response.data.message) ||
             error.message ||
             error.toString();
-
+ 
           setMessage(resMessage);
           setSuccessful(false);
         }
       );
     }
   };
-
+ 
   return (
     <div className="col-md-12">
       <div className="card card-container">

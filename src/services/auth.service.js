@@ -1,9 +1,9 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/auth/";
+const API_URL = "https://demoblog.afeagroup.com/user/";
 
 const register = (username, email, password) => {
-  return axios.post(API_URL + "signup", {
+  return axios.post(API_URL + "register", {
     username,
     email,
     password,
@@ -11,26 +11,23 @@ const register = (username, email, password) => {
 };
 
 const login = (username, password) => {
+
+    let p = new URLSearchParams();
+    params.append(name: 'username', value: 'username')
+    params.append(name: 'password', value: 'username')
+    params.append(name: 'passconf', value: 'username')
+
+    //return axios.post(url, params)
+
   return axios
-    .post(API_URL + "signin", {
+    .post(url, params, {
       username,
       password,
+      passconf
     })
-    .then((response) => {
-      if (response.data.username) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-      }
+}
 
-      return response.data;
-    });
-};
 
-const logout = () => {
-  localStorage.removeItem("user");
-  return axios.post(API_URL + "signout").then((response) => {
-    return response.data;
-  });
-};
 
 const getCurrentUser = () => {
   return JSON.parse(localStorage.getItem("user"));
@@ -39,7 +36,6 @@ const getCurrentUser = () => {
 const AuthService = {
   register,
   login,
-  logout,
   getCurrentUser,
 }
 

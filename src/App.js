@@ -13,7 +13,7 @@ import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 
-// import AuthVerify from "./common/AuthVerify";
+
 import EventBus from "./common/EventBus";
 
 const App = () => {
@@ -50,7 +50,7 @@ const App = () => {
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
-          bezKoder
+          Hakuna
         </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
