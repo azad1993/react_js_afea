@@ -12,6 +12,9 @@ const register = (username, email, password) => {
 
 const login = (username, password) => {
 
+
+
+  
     let p = new URLSearchParams();
     params.append(name: 'username', value: 'username')
     params.append(name: 'password', value: 'username')
